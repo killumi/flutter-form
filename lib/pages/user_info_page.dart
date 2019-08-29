@@ -30,11 +30,11 @@ class _UserInformationState extends State<UserInformation> {
                   TextFormField(
                     initialValue: 'User Name',
                     decoration: InputDecoration(labelText: 'First Name'),
-                    // validator: (value) {
-                    //   if (value.isEmpty) {
-                    //     return 'Enter your first name';
-                    //   }
-                    // },
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return 'Enter your first name';
+                      }
+                    },
                     onSaved: (value) => setState(() => _user.firstName = value),
                   ),
                   TextFormField(
